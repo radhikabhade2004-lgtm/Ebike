@@ -1,16 +1,13 @@
-Name : simple CI
+name: Simple CI
 
-On:[push]
+on: [push]
 
-Jobs:
-Build:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
 
-Run-on:Ubuntu- latest
-
-Steps:
-
--name:Get code(it download the code)
-Uses:action/checkout@v3
-
--name: Run Test
-run:echo"code checked successfully"
+      - name: Run Test
+        run: echo "Code checked successfully"
